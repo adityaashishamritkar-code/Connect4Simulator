@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect Four</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000000;
+            margin: 0;
+            font-family: Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        #root {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-600px); opacity: 0; }
+            80% { transform: translateY(0); opacity: 1; }
+            90% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .piece {
+            border-radius: 50%;
+            border: 1px solid #1c2833;
+            box-sizing: border-box;
+        }
+
+        .piece-red { background-color: #e74c3c; animation: fall 0.5s ease-out forwards; }
+        .piece-yellow { background-color: #f1c40f; animation: fall 0.5s ease-out forwards; }
+        .piece-empty { background-color: #0f172a; }
+
+        .game-board {
+            display: grid;
+            gap: 4px;
+            background-color: #1e3a8a;
+            padding: 5px;
+            border-radius: 8px;
+            border: 4px solid #3b82f6;
+            box-shadow: 0 0 50px rgba(59, 130, 246, 0.2);
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<script src="Connect-4-Simulator.js"></script>
+</body>
+</html>
